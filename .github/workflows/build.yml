@@ -55,7 +55,7 @@ jobs:
           python -m nuitka \
             --onefile \
             --standalone \
-            --output-filename "serena-cli-${{ matrix.target }}${{ matrix.ext }}" \
+            --output-filename=serena-cli-${{ matrix.target }}${{ matrix.ext }} \
             "${{ env.SERENA_ENTRYPOINT }}"
         # default shells (bash on Linux/macOS, pwsh on Windows) handle this fine
 
