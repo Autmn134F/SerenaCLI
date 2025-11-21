@@ -56,6 +56,10 @@ jobs:
 
       - name: Build binary with Nuitka
         run: |
+          EXTRA_OPTS=""
+          if [ "${{ matrix.target }}" = "windows" ]; then
+            EXTRA_OPTS="--assume-yes-for-downloads"
+          fi
           python -m nuitka \
             --onefile \
             --standalone \
