@@ -1,0 +1,18 @@
+[project]
+name = "serena-cli"
+version = "0.1.0"
+description = "A lightweight CLI client for Serena MCP server."
+authors = [{ name = "Jules", email = "jules@example.com" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp==1.12.3",
+    "pydantic>=2.0.0"
+]
+
+[project.scripts]
+serena-cli = "serena_cli.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
