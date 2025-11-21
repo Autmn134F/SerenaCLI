@@ -1,0 +1,3 @@
+[submodule "ref/serena"]
+	path = ref/serena
+	url = https://github.com/oraios/serena.git
