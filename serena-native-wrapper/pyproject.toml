@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "serena-native-wrapper"
+version = "0.1.0"
+description = "A command-line wrapper for Serena"
+authors = [{ name = "Jules", email = "jules@example.com" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "serena-agent",
+]
+
+[project.scripts]
+serena-native = "serena_native.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/serena_native"]
+
+[tool.uv]
+# If we can, we'd link the local serena here. But for now we rely on the environment.
