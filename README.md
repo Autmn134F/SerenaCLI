@@ -35,13 +35,3 @@ Find references to a symbol.
 ```bash
 serena-cli query references --name "MySymbol" --path "src/my_file.py"
 ```
-
-## JSON Output
-
-All commands support JSON output via `--format json` (implied by the requirement, though I need to implement it).
-
-Wait, the user requirement says:
-"Output: Plain text: ... JSON: list of objects like..."
-
-So I should probably add a global flag or per-command flag for output format. The user said "The CLI tool is designed to support structured JSON output (`--format json`)".
-I will add `--format` argument.
